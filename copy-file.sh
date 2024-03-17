@@ -6,6 +6,7 @@ do
 	if [ "$this" = "$node" ] ; then
 		echo "# skip $node"
 	else
+		echo "$node:$1"
 		rsync -a $1 $node:$1
 	fi
 done
